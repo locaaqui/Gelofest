@@ -1,0 +1,171 @@
+/* ==========================================================================
+   GeloFest - Estilos compartilhados das páginas internas
+   Complementa assets/css/main.css (template HTML5 UP) com ajustes de
+   leitura de conteúdo, tabelas, listas e botão de WhatsApp.
+   ========================================================================== */
+
+/* Navegação */
+#nav a { color: #3FA6CF !important; }
+#nav a.active { opacity: 1; }
+
+/* Conteúdo em texto corrido com leitura confortável */
+.pagina-conteudo p,
+.pagina-conteudo li {
+	text-align: left;
+	line-height: 1.75;
+}
+
+.pagina-conteudo h2,
+.pagina-conteudo h3 {
+	text-align: left;
+}
+
+.pagina-conteudo h3 {
+	color: #3FA6CF;
+	margin-top: 1.2em;
+}
+
+.pagina-conteudo .box {
+	text-align: left;
+}
+
+/* Cabeçalho da página */
+.pagina-conteudo header p {
+	max-width: 820px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Sumário / índice interno */
+.toc {
+	text-align: left;
+	background: #f6f7f3;
+	border: 1px solid #e0e0d8;
+	border-radius: 8px;
+	padding: 20px 25px;
+	margin-bottom: 2em;
+}
+
+.toc ul {
+	margin: 0.5em 0 0 1em;
+}
+
+/* Tabelas de referência */
+table.calc {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5em 0;
+	font-size: 0.95em;
+}
+
+table.calc th,
+table.calc td {
+	border: 1px solid #d8d8d8;
+	padding: 10px 12px;
+	text-align: left;
+}
+
+table.calc th {
+	background: #6D7257;
+	color: #fff;
+}
+
+table.calc tr:nth-child(even) td {
+	background: #f6f7f3;
+}
+
+/* Caixa de destaque */
+.destaque {
+	background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+	border: 1px solid #6D7257;
+	border-radius: 8px;
+	padding: 18px 22px;
+	margin: 1.5em 0;
+	text-align: left;
+}
+
+/* FAQ */
+.faq dt {
+	font-weight: 700;
+	color: #3FA6CF;
+	margin-top: 1em;
+}
+
+.faq dd {
+	margin: 0.3em 0 0 0;
+	line-height: 1.7;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-float {
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	bottom: 40px;
+	right: 70px;
+	background: linear-gradient(135deg, #6D7257 60%, #6D7257 100%);
+	color: #FFF;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 36px;
+	box-shadow: 0 0 18px 4px #2F3D3080, 0 2px 8px #888;
+	z-index: 1000;
+	animation: pulse 1.5s infinite;
+	transition: transform 0.2s, background 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.whatsapp-float i {
+	font-size: 36px;
+	line-height: 1;
+	color: #00FF40;
+}
+
+.whatsapp-float:hover {
+	background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+	transform: scale(1.12) rotate(-3deg);
+	box-shadow: 0 0 28px 8px #25d366b0, 0 2px 12px #888;
+	color: #FFF;
+}
+
+@keyframes pulse {
+	0% { box-shadow: 0 0 18px 4px #00FF40, 0 2px 8px #888; }
+	50% { box-shadow: 0 0 32px 12px #00FF40, 0 2px 12px #888; }
+	100% { box-shadow: 0 0 18px 4px #00FF40, 0 2px 8px #888; }
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+@media (max-width: 768px) {
+	.whatsapp-float {
+		width: 60px;
+		height: 60px;
+		bottom: 25px;
+		right: 25px;
+		font-size: 30px;
+	}
+	.whatsapp-float i { font-size: 30px; }
+}
+
+@media (max-width: 480px) {
+	.whatsapp-float {
+		width: 55px;
+		height: 55px;
+		bottom: 20px;
+		right: 20px;
+		font-size: 28px;
+	}
+	.whatsapp-float i { font-size: 28px; }
+}
